@@ -1,10 +1,26 @@
-const img = document.getElementById("image");
+let slideIndex = 1;
+showSlides(slideIndex);
 
-const slide_1 = new Image();
-slide_1.src = "https://github.com/MykelConnorCMA/The-Middle-East-Slideshow/blob/43583f687d09e77c47fc0876189d19bf7c863d7c/slides/1.png";
-const slide_2 = new Image();
-slide_2.src = "https://github.com/MykelConnorCMA/The-Middle-East-Slideshow/blob/43583f687d09e77c47fc0876189d19bf7c863d7c/slides/2.png";
-const slide_3 = new Image();
-slide_3.src = "https://github.com/MykelConnorCMA/The-Middle-East-Slideshow/blob/43583f687d09e77c47fc0876189d19bf7c863d7c/slides/3.png";
-const slide_4 = new Image();
-slide_4.src = "https://github.com/MykelConnorCMA/The-Middle-East-Slideshow/blob/43583f687d09e77c47fc0876189d19bf7c863d7c/slides/1.png";
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  let i;
+  let slides = document.getElementsByClassName("slides");
+  let dots = document.getElementsByClassName("dot");
+  if (n > slides.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";
+  }
+  for (i = 0; i < dots.length; i++) {
+    dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";
+  dots[slideIndex-1].className += " active";
+}
