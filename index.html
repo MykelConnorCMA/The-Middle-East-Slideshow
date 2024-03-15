@@ -10,14 +10,30 @@
       <h2>The Middle East Slideshow</h2>
       <h3>Made By: Mykel Connor</h3>
     </div>
-    <div class="slide">
-      <canvas id="slide" style="background-color:#0f0f0f;width:600px;height:300px;padding:10px;">
-        <img id="image" src="https://github.com/MykelConnorCMA/The-Middle-East-Slideshow/blob/43583f687d09e77c47fc0876189d19bf7c863d7c/slides/1.png" alt="SLIDE 1" style="width:100%;height:100%;padding:5px;">
-      </canvas>
+    <div class="body" style="background-color:#0f0f0f;width:600px;height:300px;padding:10px;">
+      <div class="slides">
+        <div class="slide" id="slide">
+          <img id="image" src="https://github.com/MykelConnorCMA/The-Middle-East-Slideshow/blob/43583f687d09e77c47fc0876189d19bf7c863d7c/slides/1.png" alt="SLIDE 1" style="width:100%;height:100%;padding:5px;">
+        </div>
+        <div class="slide" id="slide">
+          <img id="image" src="https://github.com/MykelConnorCMA/The-Middle-East-Slideshow/blob/43583f687d09e77c47fc0876189d19bf7c863d7c/slides/2.png" alt="SLIDE 2" style="width:100%;height:100%;padding:5px;">
+        </div>
+        <div class="slide" id="slide">
+          <img id="image" src="https://github.com/MykelConnorCMA/The-Middle-East-Slideshow/blob/43583f687d09e77c47fc0876189d19bf7c863d7c/slides/3.png" alt="SLIDE 3" style="width:100%;height:100%;padding:5px;">
+        </div>
+        <div class="slide" id="slide">
+          <img id="image" src="https://github.com/MykelConnorCMA/The-Middle-East-Slideshow/blob/43583f687d09e77c47fc0876189d19bf7c863d7c/slides/4.png" alt="SLIDE 4" style="width:100%;height:100%;padding:5px;">
+        </div>
+        <div class="slide" id="slide">
+          <img id="image" src="https://github.com/MykelConnorCMA/The-Middle-East-Slideshow/blob/43583f687d09e77c47fc0876189d19bf7c863d7c/slides/1.png" alt="SLIDE 5" style="width:100%;height:100%;padding:5px;">
+        </div>
+      </div>
       <br>
-      <button id="next_btn"style="width=45%;height:10%;"><</button>
-      <button id="reset_btn" style="width=7.5%;height=10%;">NULL</button>
-      <button id="prev_btn" style="width=45%;height:10%;">></button>
+      <div style="text-align:center">
+        <span class="dot" onclick="currentSlide(1)"></span>
+        <span class="dot" onclick="currentSlide(2)"></span>
+        <span class="dot" onclick="currentSlide(3)"></span>
+      </div>
     </div>
   </body>
 </html>
